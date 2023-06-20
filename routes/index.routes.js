@@ -25,6 +25,7 @@ router.post("/createItinerary", (req, res, next) => {
   })
   .catch((err)=>next(err))
 })
+
 router.post("/createLocation", (req, res, next) => {
   const {name, picture, description, popularity, coordinates} = req.body
   Location.create({name, picture, description, popularity, coordinates})
@@ -32,7 +33,6 @@ router.post("/createLocation", (req, res, next) => {
     res.json({message: 'Location succesfully created!', location: response})
   })
   .catch(err => {next(err)})
-
 });
 
 
