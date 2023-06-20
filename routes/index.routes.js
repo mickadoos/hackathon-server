@@ -6,7 +6,7 @@ router.get("/", (req, res, next) => {
   res.json("All good in here");
 });
 
-router.get("/itinerary/:itineraryId/", (req, res, next)=>{
+router.get("/itinerary/:itineraryId", (req, res, next)=>{
   let {itineraryId} = req.params;
   Itinerary.findById(itineraryId)
   .populate("attraction locationList")
