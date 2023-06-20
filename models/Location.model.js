@@ -7,7 +7,7 @@ const locationSchema = new Schema(
     picture: String,
     description: String,
     popularity: Number,
-    coordinates: {lat: Number, lng: Number}
+    coordinates: { lat: Number, lng: Number },
   },
   {
     // this second object adds extra properties: `createdAt` and `updatedAt`
